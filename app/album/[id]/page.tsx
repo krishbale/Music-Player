@@ -1,10 +1,7 @@
 'use client'
 
-type Props = {
-  id?:number;
-}
+
 import React from 'react'
-import { useRouter } from 'next/navigation'
 
 const Page= ({}) => {
   

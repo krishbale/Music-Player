@@ -1,4 +1,5 @@
-export default function Home() {
-  
-  return <p>Good luck !</p>;
+export default async function Home() {
+
+
+  return <p>Home</p>;
 }
