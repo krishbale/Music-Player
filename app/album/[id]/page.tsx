@@ -3,13 +3,13 @@
 
 import React from 'react'
 
-const Page= ({}) => {
+const Page= ({params}:any) => {
   
 
   
 
   return (
-    <div>Album details for id:  </div>
+    <div>Album details for id:{params.id}  </div>
   )
 }
 
