@@ -1,9 +1,11 @@
 'use client'
 
 
+import TrackList from '@/components/TrackList'
 import React from 'react'
-
+import Image from 'next/image'
 const Page= ({params}:any) => {
+  let arr = [1,2,3,4,5,6,7,8,9,10]
   
 
   
@@ -13,7 +15,7 @@ const Page= ({params}:any) => {
       <div className="bg-gradient-to-br from-blue-500 to-purple-500 py-16">
         <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-                <img src="https://example.com/album-cover.jpg" alt="Album Cover" className="w-64 h-64 rounded-full mx-auto"/>
+            <Image src="https://example.com/album-cover.jpg" alt="Album Cover" width={64} height={64} className="rounded-full mx-auto" />
                 <h1 className="text-4xl font-bold text-white mt-8">Album Title</h1>
                 <p className="text-lg text-gray-200 mt-4">Artist Name</p>
                 <div className="flex justify-center mt-8">
@@ -25,48 +27,15 @@ const Page= ({params}:any) => {
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl text-white font-bold mb-4">Tracklist</h2>
                 <ul>
-                    <li className="flex items-center justify-between py-4 border-b border-gray-400">
-                        <div className="flex items-center">
-                            <span className="text-white mr-4">01.</span>
-                            <div>
-                                <h3 className="text-white font-bold">Track 1</h3>
-                                <p className="text-gray-300">Artist Name</p>
-                            </div>
-                        </div>
-                        <a href="#" className="text-blue-500 hover:text-blue-300">Play</a>
-                    </li>
-                    <li className="flex items-center justify-between py-4 border-b border-gray-400">
-                        <div className="flex items-center">
-                            <span className="text-white mr-4">01.</span>
-                            <div>
-                                <h3 className="text-white font-bold">Track 1</h3>
-                                <p className="text-gray-300">Artist Name</p>
-                            </div>
-                        </div>
-                        <a href="#" className="text-blue-500 hover:text-blue-300">Play</a>
-                    </li>
+                  {arr.map((item,index)=>(
+                    <TrackList key={index} />
+                  ))}
+                    
+                   
            
-                    <li className="flex items-center justify-between py-4 border-b border-gray-400">
-                        <div className="flex items-center">
-                            <span className="text-white mr-4">01.</span>
-                            <div>
-                                <h3 className="text-white font-bold">Track 1</h3>
-                                <p className="text-gray-300">Artist Name</p>
-                            </div>
-                        </div>
-                        <a href="#" className="text-blue-500 hover:text-blue-300">Play</a>
-                    </li>
+                    
            
-                    <li className="flex items-center justify-between py-4 border-b border-gray-400">
-                        <div className="flex items-center">
-                            <span className="text-white mr-4">01.</span>
-                            <div>
-                                <h3 className="text-white font-bold">Track 1</h3>
-                                <p className="text-gray-300">Artist Name</p>
-                            </div>
-                        </div>
-                        <a href="#" className="text-blue-500 hover:text-blue-300">Play</a>
-                    </li>
+                   
            
            
                 </ul>

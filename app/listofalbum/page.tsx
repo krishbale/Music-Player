@@ -1,4 +1,4 @@
-const getAlbums = async () => {
+export default async function getAlbums  ()  {
     const url = 'https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv';
     const options = {
         Cache: 'no-store',
@@ -13,9 +13,8 @@ const getAlbums = async () => {
       };
       try {
         const response = await fetch(url, options);
-        const result = await response.text();
+        const result = await response.json();
         return result;
-        // console.log(result);
     } catch (error) {
         console.error(error);
     }
@@ -26,16 +25,16 @@ const getAlbums = async () => {
 
 
 
-export default async function listofalbum(){
-    const posts = await getAlbums();
-    console.log(posts);
-    return (
-        <div>
-            <h1>Album list is{JSON.stringify(posts)} </h1>
-        </div>
-    )
+// export default async function listofalbum(){
+//     const posts = await getAlbums();
+//     console.log(posts);
+//     return (
+//         <div>
+//             <h1>Album list is{JSON.stringify(posts)} </h1>
+//         </div>
+//     )
 
 
-} 
+// } 
 
 
