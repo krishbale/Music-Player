@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Preloader = () => {
+const Loader = () => {
  
     return <div className="flex justify-center items-center h-screen">
     <div className="relative w-24 h-24 animate-spin rounded-full bg-gradient-to-r from-purple-400 via-blue-500 to-red-400 ">
@@ -10,4 +10,4 @@ const Preloader = () => {
  
 }
 
-export default Preloader
+export default Loader

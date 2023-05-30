@@ -1,7 +1,7 @@
 "use client"
 
-import Card from '@/app/components/Card'
-import { useGetSearchAlbumQuery } from '@/app/redux/services/rapidapiCore'
+import Card from '@/components/Card'
+import { useGetSearchAlbumQuery } from '../../../redux/services/rapidapiCore'
 import React, { use, useState } from 'react'
 
 const Page = ({params}:any) => {
@@ -9,7 +9,7 @@ const Page = ({params}:any) => {
   console.log(searchterm);
   const {data,isFetching,error} = useGetSearchAlbumQuery(searchterm);
 
-    
+      
 
 if(isFetching) return <div>Loading...</div>
 if(error) return <div>Error Occured</div>

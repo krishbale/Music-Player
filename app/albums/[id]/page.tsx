@@ -1,9 +1,9 @@
 'use client'
 
-import TrackList from '../../components/TrackList'
+import TrackList from '../../../components/TrackList'
 import React from 'react'
 import Image from 'next/image'
-import { useGetAlbumQuery } from '@/app/redux/services/rapidapiCore'
+import { useGetAlbumQuery } from '../../../redux/services/rapidapiCore'
 const Page= ({params}:any) => {
   const ids = params.id
   const {data,isFetching,error} = useGetAlbumQuery(ids);

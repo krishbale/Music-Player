@@ -1,6 +1,6 @@
 "use client"
-import Card from './components/Card';
-import { useGetLatestAlbumQuery } from '@/app/redux/services/rapidapiCore'
+import Card from '../components/Card';
+import { useGetLatestAlbumQuery } from '../redux/services/rapidapiCore'
 
 
 
