@@ -9,7 +9,7 @@ export const rapidapiApi = createApi({
         baseUrl: 'https://spotify23.p.rapidapi.com/',
         
         prepareHeaders: (headers) => {
-            headers.set( 'X-RapidAPI-Key', 'c91fb6419emshba5ce137000923dp146f26jsn77938233d840');
+            headers.set( 'X-RapidAPI-Key', '73bc937552msh27eaf79d281b2bbp1e52afjsn9a548c143686');///you can  have to change it value if the free suvscription is expired
             headers.set('X-RapidAPI-Host', 'spotify23.p.rapidapi.com');
             return headers;
         },
