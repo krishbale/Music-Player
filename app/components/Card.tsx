@@ -8,15 +8,16 @@ interface CardProps {
 const Card = ({item,index}:CardProps) => {
   // console.log(item.data)
   const { artists,coverArt,date,name,uri } = item.data;
+  const ids = uri.replace("spotify:album:","");
   console.log(name)
 
   
   return (
     <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-    <Image 
+    <Image priority={index ===42} className='object-cover w-full h-64'
     // src=""
     src={coverArt.sources[0].url} 
-    alt="Album Cover" width={500} height={200} objectFit="cover" />
+    alt="Album Cover" width={500} height={200}  />
             <div className="p-4">
                 <h2 className="text-xl font-bold mb-2">
                   {name}
@@ -24,7 +25,7 @@ const Card = ({item,index}:CardProps) => {
                 <p className="text-gray-600">
                 {artists.items[0].profile.name}
                 </p>
-                <Link href="album/1" className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Details</Link>
+                <Link href={`albums/${ids}`} className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Details</Link>
             </div>
         </div>
   )

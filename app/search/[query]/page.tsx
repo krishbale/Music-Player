@@ -6,6 +6,7 @@ import React, { use, useState } from 'react'
 
 const Page = ({params}:any) => {
   const searchterm = params.query
+  console.log(searchterm);
   const {data,isFetching,error} = useGetSearchAlbumQuery(searchterm);
 
     

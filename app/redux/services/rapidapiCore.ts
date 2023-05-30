@@ -3,6 +3,7 @@ import {  createApi ,fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 
 
+
 export const rapidapiApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: 'https://spotify23.p.rapidapi.com/',
@@ -17,11 +18,12 @@ export const rapidapiApi = createApi({
     endpoints:
       (builder)=>({
         getLatestAlbum: builder.query({ query:(searchTerm) => `search/?q=${searchTerm}&type=multi&offset=0&limit=10&numberofTopResults=5`}),
-        getSearchAlbum: builder.query({ query:(searchTerm) => `search/?q=${searchTerm}&type=&offset=0&limit=20`})
+        getSearchAlbum: builder.query({ query:(searchTerm) => `search/?q=${searchTerm}&type=&offset=0&limit=20`}),
+        getAlbum: builder.query({ query:(ids) => `albums/?ids=${ids}`}),
 
       }),
     }
 );
 
-export const { useGetLatestAlbumQuery,useGetSearchAlbumQuery } = rapidapiApi;
+export const { useGetLatestAlbumQuery,useGetSearchAlbumQuery,useGetAlbumQuery } = rapidapiApi;
 

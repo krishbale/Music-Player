@@ -10,7 +10,7 @@ import { useGetLatestAlbumQuery } from '@/app/redux/services/rapidapiCore'
 export default async function Home() {
   const {data,isFetching,error} = useGetLatestAlbumQuery("Trending");
   const Top10Latest = data?.albums.items;
-// console.log(Top10Latest);
+console.log(Top10Latest);
 
 
  
