@@ -23,8 +23,9 @@ const TrackList = ({item,index}:TrackProps) => {
                                 }
                             </div>
                         </div>
-                     <AudioPlayer preview_url={preview_url} />
+                   
                         <a href="" className="text-blue-500 hover:text-blue-300">Play</a>
+                        <AudioPlayer preview_url={preview_url} />
                     </li>
   )
 }

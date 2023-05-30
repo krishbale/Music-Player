@@ -8,7 +8,7 @@ import { useGetLatestAlbumQuery } from '../redux/services/rapidapiCore'
 
 
 export default async function Home() {
-  const {data,isFetching,error} = useGetLatestAlbumQuery("Bollowood");
+  const {data,isFetching,error} = useGetLatestAlbumQuery("Trending English Songs");
   const Top10Latest = data?.albums.items;
 console.log(Top10Latest);
 
