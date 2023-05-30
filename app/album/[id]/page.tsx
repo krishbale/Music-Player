@@ -1,7 +1,6 @@
 'use client'
 
-
-import TrackList from '@/components/TrackList'
+import TrackList from '../../components/TrackList'
 import React from 'react'
 import Image from 'next/image'
 const Page= ({params}:any) => {
