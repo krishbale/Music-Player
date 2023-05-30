@@ -5,7 +5,7 @@ import { useGetSearchAlbumQuery } from '../../../redux/services/rapidapiCore'
 import React, { use, useState } from 'react'
 import Loader from '@/components/Preloader'
 const Page = ({params}:any) => {
-  const searchterm = params.query
+  const searchterm = params.query.replace(/-/g, ' ');
   console.log(searchterm);
   const {data,isFetching,error} = useGetSearchAlbumQuery(searchterm);
 

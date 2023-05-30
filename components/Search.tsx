@@ -6,8 +6,8 @@ const Search = () => {
     const [query,setQuery] = useState('')
     const router = useRouter();
    const handlesubmit = (e:any) => {
-    if(e.key === 'Enter'){
-      router.push(`/search/${query}`)
+    if(e.key === 'Enter' && query !== ''){
+      router.push(`/search/${query.split(' ').join('-')}`)
     }
    }
   
@@ -25,8 +25,12 @@ const Search = () => {
                           type="search"
                           
                            placeholder="Search..."/>
-                          {/* <input type='submit' onClick={()=> router.push(`/search/${query}`)} value='Search' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' />  */}
-                        <Link href={`/search/${query}`} type='submit'>Search</Link>
+                          
+                          {query !== '' &&
+                          
+                           <Link href={`/search/${query}`} type='submit'>Search</Link>
+                          }
+                       
                     </div>
                 
   )
