@@ -12,19 +12,19 @@ const TrackList = ({item,index}:TrackProps) => {
   return (
     <li key={index} className="flex items-center justify-between py-4 border-b border-gray-400">
                         <div className="flex items-center">
-                            <span className="text-white mr-4">{track_number}.</span>
+                            <span className="text-dark mr-4">{track_number}.</span>
                             <div>
-                                <h3 className="text-white font-bold">{name}</h3>
+                                <h3 className="text-dark font-bold">{name}</h3>
                              
                                 {
                                   artists?.map((item:any,index:any)=>(
-                                    <p className="text-gray-300" key={index}>{item.name}</p>  
+                                    <p className="text-dark" key={index}>{item.name}</p>  
                                   ))
                                 }
                             </div>
                         </div>
                    
-                        <a href="" className="text-blue-500 hover:text-blue-300">Play</a>
+                        {/* <a href="" className="text-blue-500 hover:text-blue-300">Play</a> */}
                         <AudioPlayer preview_url={preview_url} />
                     </li>
   )

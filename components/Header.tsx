@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Search from './Search'
 const Header = () => {
   return (
-    <nav className='bg-blue-500'>
+    <nav className='bg-white'>
       <div className='container mx-auto px-6 py-3'>
         <div className='flex items-center justify-between'>
         

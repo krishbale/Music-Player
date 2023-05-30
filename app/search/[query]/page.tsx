@@ -3,7 +3,7 @@
 import Card from '@/components/Card'
 import { useGetSearchAlbumQuery } from '../../../redux/services/rapidapiCore'
 import React, { use, useState } from 'react'
-
+import Loader from '@/components/Preloader'
 const Page = ({params}:any) => {
   const searchterm = params.query
   console.log(searchterm);
@@ -11,7 +11,11 @@ const Page = ({params}:any) => {
 
       
 
-if(isFetching) return <div>Loading...</div>
+  if(isFetching) return (
+    <>
+    <Loader />
+    </>
+  )
 if(error) return <div>Error Occured</div>
 
    
@@ -21,7 +25,7 @@ if(error) return <div>Error Occured</div>
  
   return (
     <>
-    <div className="bg-gray-100">
+    <div className="bg-dark">
     <div className="container mx-auto py-8">
         <h1 className="text-xl font-bold mb-4">Search Result for: {searchterm}</h1>
         <div className="flex justify-center">

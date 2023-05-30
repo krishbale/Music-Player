@@ -13,7 +13,7 @@ const Card = ({item,index}:CardProps) => {
 
   
   return (
-    <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+    <div key={index} className="bg-transparent shadow-lg rounded-lg overflow-hidden">
     <Image priority={index ===42} className='object-cover w-full h-64'
     // src=""
     src={coverArt.sources[0].url} 
