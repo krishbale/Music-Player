@@ -8,7 +8,7 @@ const Search = () => {
     
  
   return (
-                     <form action={() => router.push(`/search/${query}`)} >
+                     <form>
                     <div className="flex items-center border-b-2 border-blue-500 py-2">
                         <input 
                         autoComplete='off'
@@ -19,7 +19,7 @@ const Search = () => {
                           type="search"
                           
                            placeholder="Search..."/>
-                        <button type='submit'>Search</button>
+                        <Link href={`/search/${query}`} type='submit'>Search</Link>
                     </div>
                 </form>
   )

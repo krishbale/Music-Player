@@ -25,7 +25,7 @@ const Card = ({item,index}:CardProps) => {
                 <p className="text-gray-600">
                 {artists.items[0].profile.name}
                 </p>
-                <Link href={`albums/${ids}`} className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Details</Link>
+                <Link href={`albums/${ids}`} className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Play All</Link>
             </div>
         </div>
   )
