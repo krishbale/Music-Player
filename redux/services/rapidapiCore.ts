@@ -15,7 +15,7 @@ export const rapidapiApi = createApi({
         },
        
     }),
-    refetchOnMountOrArgChange:600,      //minimize the number of api calls 
+    // refetchOnMountOrArgChange:60,      //minimize the number of api calls 
     endpoints:
       (builder)=>({
         getLatestAlbum: builder.query({ query:(searchTerm) => `search/?q=${searchTerm}&type=multi&offset=0&limit=10&numberofTopResults=5`}),
