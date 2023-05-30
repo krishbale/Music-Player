@@ -1,11 +1,14 @@
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React, {  useState } from 'react'
 
 const Search = () => {
     const [query,setQuery] = useState('')
+    const router = useRouter();
+    
  
   return (
-                     <form >
+                     <form action={() => router.push(`/search/${query}`)} >
                     <div className="flex items-center border-b-2 border-blue-500 py-2">
                         <input 
                         autoComplete='off'
@@ -16,7 +19,7 @@ const Search = () => {
                           type="search"
                           
                            placeholder="Search..."/>
-                        <Link href={`/search/${query}`} >Search</Link>
+                        <button type='submit'>Search</button>
                     </div>
                 </form>
   )
