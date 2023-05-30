@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Search from './Search'
 const Header = () => {
   return (
     <nav className='bg-blue-500'>
@@ -9,7 +10,9 @@ const Header = () => {
           <Link className='text-xl font-bold justify-between' href='/'>Music World</Link>
         <div className='flex space-x-4'>
      
-      <Link className='text-white hover:text-gray-200' href="/search">Search</Link>
+        <Search />
+
+      
       </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ const Page= ({params}:any) => {
       <div className="bg-gradient-to-br from-blue-500 to-purple-500 py-16">
         <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-            <Image src="https://example.com/album-cover.jpg" alt="Album Cover" width={64} height={64} className="rounded-full mx-auto" />
+            <Image src="" alt="Album Cover" width={64} height={64} className="rounded-full mx-auto" />
                 <h1 className="text-4xl font-bold text-white mt-8">Album Title</h1>
                 <p className="text-lg text-gray-200 mt-4">Artist Name</p>
                 <div className="flex justify-center mt-8">

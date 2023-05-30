@@ -3,13 +3,12 @@ import Card from './components/Card';
 import { useGetLatestAlbumQuery } from '@/app/redux/services/rapidapiCore'
 
 
-const arr = [1,2,3,4,5,6,7,8,9,10]
 
 
 
 
 export default async function Home() {
-  const {data,isFetching,error} = useGetLatestAlbumQuery("latest");
+  const {data,isFetching,error} = useGetLatestAlbumQuery("Trending");
   const Top10Latest = data?.albums.items;
 // console.log(Top10Latest);
 
