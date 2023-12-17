@@ -9,13 +9,10 @@ Clone the repository to your local machine using the following command:
 
 bash
 
-git clone <repository-url> || git clone https://github.com/krishbale/frontend-assignment.git
 
 Navigate to the project directory:
 
-bash
 
-cd frontend-assignment
 Install the dependencies by running either of the following commands:
 
 Using npm:
@@ -33,13 +30,10 @@ In this project API key required for Music is generated from
  1.To get your own api key  you have to first sign and login
  2.after the sign in  you can note down your api key
  3.In my case my api key from my account are given below :-
-//however only 500 api request is free for to use .
 X-RapidAPI-Key = '73bc937552msh27eaf79d281b2bbp1e52afjsn9a548c143686'
 X-RapidAPI-Host= spotify23.p.rapidapi.com
 
- you can also Create a .env file in the root directory of the project.and store the api key  for security reason .
 
-However, i have directly used the key in my code  for easy configuration .
 
  project folder to use api key  redux/services/rapidapiCore.ts
 Running the Application
@@ -69,6 +63,4 @@ Deploy your Next.js music player software to your preferred hosting platform or 
 Make sure to set the necessary environment variables in your deployment environment to match the configurations mentioned in the .env file.
 
 My Deployment Link:
-<https://frontend-assignment-peach-ten.vercel.app/>
-In case API key may have expire please create a  new api using new credentials at
- <https://rapidapi.com/Glavier/api/spotify23>
+
